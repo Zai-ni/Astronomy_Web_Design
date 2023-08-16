@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="gallery.css" >
+    <link rel="icon" type="image/x-icon" href="logo11-01-logofavicon.png">
+  </head>
+  <body>
+    <div class="header">
+      <a href="cw.html">
+        <img id="logo" src="logo11-01names1s.png" alt="logo">
+      </a>
+        <ul id="navigation">
+          <li>
+            <a href="cw.html">Home</a>
+          </li>
+          <li>
+            <a href="BuyProducts.html">Shop</a>
+          </li>
+          <li>
+            <a href="TakeQuiz.html">Quiz</a>
+          </li>
+          <li>
+            <a class="active" href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="sitemap.html">Site map</a>
+          </li>
+          <li>
+            <a href="commentform.html">Feedback</a>
+          </li>
+          <li>
+            <a href="team.html">About us</a>
+          </li>
+        </ul>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="appearance">
+      <div class="text">
+        <img src="Images/student4/gallery/a-10.png" alt="small" id="small">
+        <img src="Images/student4/gallery/a-14.png" alt="large" id="large">
+        <img src="Images/student4/gallery/a-18.png" alt="larger" id="larger">
+      </div>
+      <div class="theme">
+        <input type="button" name="default" id="default" value="Default">
+        <input type="button" name="Blue" id="blue" value="Blue">
+        <input type="button" name="grey" id="grey" value="Grey">
+        <input type="color" id="randomcolor">
+      </div>
+    </div>
+    <h1 id="title">Gallery</h1>
+    <div class="gallery">
+      <div class="images">
+        <img src="Images/student4/blackhole/blackhole1.jpg" alt="Black Hole Sagittarius A*" id="bh1">
+        <img src="Images/student4/blackhole/AlbertEinstein.jpg" alt="Albert Einstein tongue out" id="bh2">
+        <img src="Images/student4/constellations/constellations.jpg" alt="Constellations" id="c1">
+        <img src="Images/student4/constellations/aquarius.jpg" alt="Aquarius" id="c2">
+        <img src="Images/student4/constellations/aries.jpg" alt="Aries" id="c3">
+        <img src="Images/student4/constellations/cancer.jpg" alt="Cancer" id="c4">
+        <img src="Images/student4/constellations/capricorn.jpg" alt="Capricorn" id="c5">
+        <img src="Images/student4/constellations/gemini.jpg" alt="gemini" id="c6">
+        <img src="Images/student4/constellations/leo.jpg" alt="leo" id="c7">
+        <img src="Images/student4/constellations/libra.jpg" alt="libra" id="c8">
+        <img src="Images/student4/constellations/pisces.jpg" alt="pisces" id="c9">
+        <img src="Images/student4/constellations/sagittarius.jpg" alt="sagittarius" id="c10">
+        <img src="Images/student4/constellations/scorpio.jpg" alt="scorpio" id="c11">
+        <img src="Images/student4/constellations/taurus.jpg" alt="taurus" id="c12">
+        <img src="Images/student4/constellations/virgo.jpg" alt="virgo" id="c13">
+        <img src="Images/student4/planets/solarsystem.jpg" alt="solarsystem" id="p1">
+      </div>
+      <div class="selectioncontainer">
+        <div id="chosenpic">
+          <img src="Images/student4/blackhole/blackhole1.jpg" alt="Black Hole Sagittarius A*">
+        </div>
+        <div id="descriptionCon">
+          <p id="picdescription">
+            It is a x-ray and infrared image of Black Hole Sagittarius A*.The center of the Milky Way galaxy, with the supermassive black hole Sagittarius A* (Sgr A*), located in the middle, is revealed in these image.During 2012, Chandra collected about five weeks worth of observations to capture unprecedented X-ray images and energy signatures of multi-million degree gas swirling around Sgr A*, a black hole with about 4 million times the mass of the Sun. At just 26,000 light years from Earth, Sgr A* is one of very few black holes in the universe where we can actually witness the flow of matter nearby. <a href='https://www.nasa.gov/mission_pages/chandra/multimedia/black-hole-SagittariusA.html'>read more....</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>&copy; 2023 Astronomia</p>
+        <nav>
+          <a href="about.html">About</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a> 
+        </nav>
+      </div>
+      <div class="socialicons">
+        <a href="https://www.facebook.com">
+          <img src="facebook.png" alt="facebook">
+        </a>
+        <a href="https://twitter.com">
+          <img src="twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.instagram.com">
+          <img src="instagram.png" alt="instagram">
+        </a>
+      </div>
+      <div class="backtotop">
+        <a href="#">
+            <img src="arrowhead-up.png" alt="back to top">
+        </a>
+      </div>
+      <div class="editor">
+        <a href="zaini.html">
+          <img src="editor.png" alt="editor">
+        </a>
+      </div>
+    </footer>
+    <script>
+      
+      function fontsize(chosenfontsize){
+				var  chosenfontsize= chosenfontsize;
+			
+				switch (chosenfontsize) {
+        case "small":
+          document.getElementById("title").style.fontSize = "18px";
+          document.getElementById("picdescription").style.fontSize = "10px";
+          break;
+        case "large":
+          document.getElementById("title").style.fontSize = "32px";
+          document.getElementById("picdescription").style.fontSize = "18px";
+          break;
+        case "larger":
+          document.getElementById("title").style.fontSize = "50px";
+          document.getElementById("picdescription").style.fontSize = "24px";
+          break;
+        default:
+          document.getElementById("title").style.fontSize = "32px";
+          document.getElementById("picdescription").style.fontSize = "18px";
+          break;
+			  }
+      }
+      document.getElementById("small").addEventListener("click",function(){fontsize("small")});
+      document.getElementById("large").addEventListener("click",function(){fontsize("large")});
+      document.getElementById("larger").addEventListener("click",function(){fontsize("larger")});
+
+      
+      document.getElementById("default").addEventListener("click",function(){
+        document.body.style.backgroundColor = "";
+      });
+      document.getElementById("blue").addEventListener("click",function(){
+        document.body.style.backgroundColor = this.value;
+      });
+      document.getElementById("grey").addEventListener("click",function(){
+        document.body.style.backgroundColor = this.value;
+      });
+
+      document.getElementById("randomcolor").addEventListener("change", function () {
+          document.body.style.backgroundColor = this.value;
+        }
+      );
+
+      function pics(chosenpicid){
+				var chosenpicid = chosenpicid;
+			
+				switch (chosenpicid) {
+        case "bh1":
+          document.getElementById("bh1").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/blackhole/blackhole1.jpg" alt="Black Hole Sagittarius A*">';
+          document.getElementById("picdescription").innerHTML = " It is a x-ray and infrared image of Black Hole Sagittarius A*.The center of the Milky Way galaxy, with the supermassive black hole Sagittarius A* (Sgr A*), located in the middle, is revealed in these image.During 2012, Chandra collected about five weeks worth of observations to capture unprecedented X-ray images and energy signatures of multi-million degree gas swirling around Sgr A*, a black hole with about 4 million times the mass of the Sun. At just 26,000 light years from Earth, Sgr A* is one of very few black holes in the universe where we can actually witness the flow of matter nearby. <a href='https://www.nasa.gov/mission_pages/chandra/multimedia/black-hole-SagittariusA.html'>read more....</a>";
+          break;
+        case "bh2":
+          document.getElementById("bh2").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/blackhole/AlbertEinstein.jpg" alt="Albert Einstein tongue out">';
+          document.getElementById("picdescription").innerHTML = " 14 March 1951: Arthur Sasse was amongst the pack of photographers hounding Albert Einstein as he left his 72nd birthday celebration but the only one to get this shot of him playfully sticking his tongue out. This crop (from a wider image showing his companions in the back of a car) was chosen by Einstein himself to put on greetings cards to be sent out to friends. The photograph, arguably one of the best known press photographs of any 20th century personality, established a public image of Einstein as the 'nutty professor' rather than the nobel prize-winning physicist who developed the theory of general relativity. <a href='https://www.theguardian.com/artanddesign/picture/2014/mar/14/albert-einstein-tongue-photography'>read more....</a>";
+          break;
+        case "c1":
+          document.getElementById("c1").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/constellations.jpg" alt="Constellations">';
+          document.getElementById("picdescription").innerHTML = "The Constellations of the Astrological Zodiac-There are 88 \"official\" constellations defined by The International Astronomical Union. Of these, 13 touch the Earth's ecliptic and 12 bear the same name as the astrological signs (Constellation Ophiuchus is not included in the astrological zodiac.) Browse through the 12 constellations of the astrological zodiac, discover where each is located in the night sky, as well as read the star lore surrounding the constellation and how each relates to the astrological sign that bears its name.<a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c2":
+          document.getElementById("c2").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/aquarius.jpg" alt="Aquarius">';
+          document.getElementById("picdescription").innerHTML = "Constellation Aquarius: The Water Bearer-Constellation Aquarius has a lot of water symbolism, but the astrological sign of Aquarius is one of the three Air signs. So, what's the sign's connection to water? Constellation Aquarius is located in a deep, dark area of the sky that's sometimes called the celestial sea. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c3":
+          document.getElementById("c3").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/aries.jpg" alt="Aries">';
+          document.getElementById("picdescription").innerHTML = "Constellation Aries: The Ram-Over 2,000 years ago, Constellation Aries hosted the vernal equinox. It marked a time of renewal and celebration. The Aries constellation myth, Jason and the Argonauts, reveals the astrological sign of Aries, like Jason, is bold, adventurous, enterprising, optimistic, daring, and courageous.<a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c4":
+          document.getElementById("c4").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/cancer.jpg" alt="Cancer">';
+          document.getElementById("picdescription").innerHTML = "Constellation Cancer: The Crab-The ancients believed Constellation Cancer to be the \"Gate of Men\" through which souls descended from heaven into human bodies. The stars of Cancer, Praesepe (the \"manger\"), Asellus Borealis (the Northern Donkey), and Asellus Australis (the Southern Donkey) tell an unusual Christmas story. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c5":
+          document.getElementById("c5").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/capricorn.jpg" alt="Capricorn">';
+          document.getElementById("picdescription").innerHTML = "Constellation Capricornus: The Sea-Goat-First recorded in the early Bronze Age, the Suns entrance into Constellation Capricornus marked the winter solstice; now the Sun's entrance into the astrological sign of Capricorn marks the winter solstice. Like it's Sea-Goat symbol, Capricorn is one of the most paradoxical signs in the astrological zodiac. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c6":
+          document.getElementById("c6").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/gemini.jpg" alt="gemini">';
+          document.getElementById("picdescription").innerHTML = "Constellation Gemini: The Twins-Constellation Gemini is one of the brighter constellations in the night sky and its two brightest stars, Castor and Pollux, make it easy to spot. Both the constellations and the astrological sign of Gemini are all about duality. The legends and myths associated with the Gemini constellation highlight that fact. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c7":
+          document.getElementById("c7").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/leo.jpg" alt="leo">';
+          document.getElementById("picdescription").innerHTML = "Constellation Leo: The Lion-Constellation Leo's star Regulus, the \"Heart of the Lion,\" is the kingliest of its four royal stars. These four stars are considered sentinels that watch over other stars. The constellation's myths, including the story of how Hercules killed the Nemean lion, symbolize the strength, courage, creativity, and tenacity that is inherent in the astrological sign of Leo. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c8":
+          document.getElementById("c8").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/libra.jpg" alt="libra">';
+          document.getElementById("picdescription").innerHTML = "Constellation Libra: The Scales-The ancients had a hard time deciding \"if\" there was a Constellation Libra. However, knowing the history of constellation Libra's scales and constellation Scorpius' claws reveals that the astrological sign of Libra could be the most complex and contradictory sign of the zodiac. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c9":
+          document.getElementById("c9").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/pisces.jpg" alt="pisces">';
+          document.getElementById("picdescription").innerHTML = "Constellation Pisces: The Fishes-The Pisces constellation is filled with heavenly wonders, it's stars were said to control the fate of seafarers, and it's been associated with Christ. All of this is echos the spiritual, mystical, and nebulous character of the astrological sign Pisces. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c10":
+          document.getElementById("c10").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/sagittarius.jpg" alt="sagittarius">';
+          document.getElementById("picdescription").innerHTML = "Constellation Sagittarius: The Archer Centaur-Constellation Sagittarius is amazingly diverse. It lies in at the center of the Earth's Milky Way galaxy with its arrow aimed at the heart of Scorpius. Legends say that if Scorpio intends to harm anyone, the archer will shoot an arrow through its heart. The myths of Sagittarius reveal that the sign of Sagittarius is about humanity's need to attain knowledge, wisdom, and greater truths. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c11":
+          document.getElementById("c11").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/scorpio.jpg" alt="scorpio">';
+          document.getElementById("picdescription").innerHTML = "Constellation Scorpius: The Scorpion-Initially, Constellations Scorpius and Virgo were connected, then the Romans created Libra, and the stars that were once the Scorpion's claws became Libra's scales. This merging and transforming of Scorpius's boundaries echos the death, and rebirth aspects of astrological Scorpio. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c12":
+          document.getElementById("c12").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/taurus.jpg" alt="taurus">';
+          document.getElementById("picdescription").innerHTML = "Constellation Taurus: The Bull-Constellation Taurus is the home of the Pleiades, the Seven Sisters. To the ancients, the \"Bull of Heaven\" represented what the astrological sign of Taurus does today - the strength, fertility, sensuality, and endurance of the feminine, as well as the sacredness of Mother Nature. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "c13":
+          document.getElementById("c13").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/constellations/virgo.jpg" alt="virgo">';
+          document.getElementById("picdescription").innerHTML = "Constellation Virgo: The Virgin-The Virgo constellation, the only woman in the night sky, is the \"Queen of Heaven.\" The ancients linked Virgo to the goddesses of the harvest, as well as to maidens and purity. The astrological sign of Virgo speaks of purity, innocence, and self-sacrifice. <a href='https://www.lovetoknow.com/life/astrology/constellations-zodiac'>read more....</a>";
+          break;
+        case "p1":
+          document.getElementById("p1").style.transform="scale(1.05)";
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/planets/solarsystem.jpg" alt="solarsystem">';
+          document.getElementById("picdescription").innerHTML = "Our solar system revolves around the Sun, a massive and radiant star that illuminates and warms the planets. Mercury, the innermost planet, possesses a rocky terrain and experiences extreme temperatures. Cloaked in dense clouds, Venus stands as the hottest planet due to its greenhouse effect. Earth, our cherished abode, thrives with diverse life forms and a harmonious blend of water and land. Mars, often dubbed the \"Red Planet,\" boasts a thin atmosphere and exhibits signs of ancient water presence. Jupiter, the largest among them all, reigns as a gas giant, showcasing mesmerizing storms like the iconic Great Red Spot. Saturn, renowned for its mesmerizing ring system, is also a gas giant. Uranus and Neptune, situated further out, fall under the category of ice giants, characterized by frigid climates and icy compositions. Pluto, though reclassified as a dwarf planet, orbits within the distant Kuiper Belt, a region teeming with icy objects. <a href='https://solarsystem.nasa.gov/'>read more....</a>";
+          break;
+        default:
+          document.getElementById("chosenpic").innerHTML = '<img src="Images/student4/blackhole/blackhole1.jpg" alt="Black Hole Sagittarius A*">';
+          document.getElementById("picdescription").innerHTML = " It is a x-ray and infrared image of Black Hole Sagittarius A*.The center of the Milky Way galaxy, with the supermassive black hole Sagittarius A* (Sgr A*), located in the middle, is revealed in these image.During 2012, Chandra collected about five weeks worth of observations to capture unprecedented X-ray images and energy signatures of multi-million degree gas swirling around Sgr A*, a black hole with about 4 million times the mass of the Sun. At just 26,000 light years from Earth, Sgr A* is one of very few black holes in the universe where we can actually witness the flow of matter nearby. <a href='https://www.nasa.gov/mission_pages/chandra/multimedia/black-hole-SagittariusA.html'>read more....</a>";
+          break;
+			  }
+      }
+
+      document.getElementById("bh1").addEventListener("mouseover",function(){pics("bh1")});
+      document.getElementById("bh2").addEventListener("mouseover",function(){pics("bh2")});
+      document.getElementById("c1").addEventListener("mouseover",function(){pics("c1")});
+      document.getElementById("c2").addEventListener("mouseover",function(){pics("c2")});
+      document.getElementById("c3").addEventListener("mouseover",function(){pics("c3")});
+      document.getElementById("c4").addEventListener("mouseover",function(){pics("c4")});
+      document.getElementById("c5").addEventListener("mouseover",function(){pics("c5")});
+      document.getElementById("c6").addEventListener("mouseover",function(){pics("c6")});
+      document.getElementById("c7").addEventListener("mouseover",function(){pics("c7")});
+      document.getElementById("c8").addEventListener("mouseover",function(){pics("c8")});
+      document.getElementById("c9").addEventListener("mouseover",function(){pics("c9")});
+      document.getElementById("c10").addEventListener("mouseover",function(){pics("c10")});
+      document.getElementById("c11").addEventListener("mouseover",function(){pics("c11")});
+      document.getElementById("c12").addEventListener("mouseover",function(){pics("c12")});
+      document.getElementById("c13").addEventListener("mouseover",function(){pics("c13")});
+      document.getElementById("p1").addEventListener("mouseover",function(){pics("p1")});
+
+      document.getElementById("bh1").addEventListener("mouseout",function(){document.getElementById("bh1").style.transform="scale(1)";});
+      document.getElementById("bh2").addEventListener("mouseout",function(){document.getElementById("bh2").style.transform="scale(1)";});
+      document.getElementById("c1").addEventListener("mouseout",function(){document.getElementById("c1").style.transform="scale(1)";});
+      document.getElementById("c2").addEventListener("mouseout",function(){document.getElementById("c2").style.transform="scale(1)";});
+      document.getElementById("c3").addEventListener("mouseout",function(){document.getElementById("c3").style.transform="scale(1)";});
+      document.getElementById("c4").addEventListener("mouseout",function(){document.getElementById("c4").style.transform="scale(1)";});
+      document.getElementById("c5").addEventListener("mouseout",function(){document.getElementById("c5").style.transform="scale(1)";});
+      document.getElementById("c6").addEventListener("mouseout",function(){document.getElementById("c6").style.transform="scale(1)";});
+      document.getElementById("c7").addEventListener("mouseout",function(){document.getElementById("c7").style.transform="scale(1)";});
+      document.getElementById("c8").addEventListener("mouseout",function(){document.getElementById("c8").style.transform="scale(1)";});
+      document.getElementById("c9").addEventListener("mouseout",function(){document.getElementById("c9").style.transform="scale(1)";});
+      document.getElementById("c10").addEventListener("mouseout",function(){document.getElementById("c10").style.transform="scale(1)";});
+      document.getElementById("c11").addEventListener("mouseout",function(){document.getElementById("c11").style.transform="scale(1)";});
+      document.getElementById("c12").addEventListener("mouseout",function(){document.getElementById("c12").style.transform="scale(1)";});
+      document.getElementById("c13").addEventListener("mouseout",function(){document.getElementById("c13").style.transform="scale(1)";});
+      document.getElementById("p1").addEventListener("mouseout",function(){document.getElementById("p1").style.transform="scale(1)";});
+      
+
+    </script>
+  </body>
+</html>

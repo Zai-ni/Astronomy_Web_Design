@@ -1,0 +1,66 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(214, 207, 207);
+}
+body{
+    background-image: linear-gradient(315deg, rgba(220,10,252,255) 0%, rgba(112,41,242,255)   74%);
+    scroll-behavior: smooth;
+}
+.topic{
+    margin-left: 24%;
+}
+.Personal{
+    text-align: center;
+}
+.Personal h2{
+    margin-left: 30%;
+    margin-top: -4%;
+    font-size: 36px;
+}
+.Personal img{
+    max-width: 200px;
+    max-height: 200px;
+    float: right;
+    margin-top: 4%;
+    border-radius: 10px;
+}
+.Personal,.homepage,.feedback,.content {
+    background-color: rgba(217, 217, 217, 0.253);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.473);
+    overflow: hidden;
+    position: relative;
+    padding: 5rem;
+    justify-content: center;
+    width: 50rem;
+    margin: 5rem auto;
+    line-height: 2rem;
+    text-align: left;
+}
+p{
+    margin-bottom: 5%;
+}
+.button {
+    background-color: rgba(80, 49, 237, 0.637);
+    color: #fdfdfd;
+    border: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 20rem;
+    margin: 1rem auto;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.button:hover {
+    background-color:rgb(23, 9, 95);
+    opacity: 0.8;
+    transition: all .3s ease;
+    transform: scale(1.05);
+}

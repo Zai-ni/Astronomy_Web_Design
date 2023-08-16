@@ -1,0 +1,92 @@
+/* CSS Reset - Optional but can be useful to start from a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #615f5f;
+    display: flex; /* Use flexbox to center content vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Set a minimum height to ensure content is centered even if there's little content */
+  }
+  
+  /* Heading Styles */
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #555;
+    margin-top: 15px;
+  }
+  
+  /* Paragraph Styles */
+  p {
+    color: #0f0f0f;
+    margin: 5px 0;
+  }
+  
+  /* Hyperlink Styles */
+  a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Container Styles for Cards */
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    margin: 20px;
+    border: 1px solid #101010;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card-title {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Class "p" Styles */
+  .p {
+    margin-left: 20px;
+  }
+  
+  /* Button Styles */
+  .button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

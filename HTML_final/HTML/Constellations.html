@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo11-01-logofavicon.png">
+    <title>Constellations</title>
+    <style>
+      /* This class is used to prevent overlapping of definition and navigation bar  */
+        #definition{
+            position: relative;
+            top: 150px;
+            margin: 0 30px 30px 30px;
+            font-size: 40px;
+        }
+        /* To position the image */
+        #constellations{
+            margin-top: 150px;
+            margin-left: 460px;
+            margin-right: 50px;
+        }
+         /* Each topic is included inside the fieldset to style and position it*/
+        fieldset{
+                width:1770px;
+                margin-top: 50px;
+                margin-left: 50px;
+                padding-bottom: 30px;
+                margin-bottom: 50px;
+                border-radius: 12px;
+                font-size: 35px;
+            }
+            /* to change the font size of the title on the legend */
+            legend{
+                font-size: 40px;
+            }
+            /* class odd and even are used to alternate the styles one by another */
+            .odd{        
+                background-color:rgba(188, 79, 247, 0.5) ;
+                color: rgb(21, 21, 101);
+                text-align: justify;
+                font-weight: bold;
+                
+            }
+            .even{                
+                background-color: rgba(21, 21, 101,0.5); 
+                color: rgb(188, 79, 247);
+                text-align: justify;
+                font-weight: bold;
+            }
+            
+            
+
+            
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="cw.html">
+        <img id="logo" src="images/logo.png" alt="logo">
+      </a>
+        <ul id="navigation">
+          <li>
+            <a href="cw.html">Home</a>
+          </li>
+          <li>
+            <a href="BuyProducts.html">Shop</a>
+          </li>
+          <li>
+            <a href="TakeQuiz.html">Quiz</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="sitemap.html">Site map</a>
+          </li>
+          <li>
+            <a href="commentform.html">Feedback</a>
+          </li>
+          <li>
+            <a href="team.html">About us</a>
+          </li>
+        </ul>
+    </div>
+  
+    <!-- Definition of the topic -->
+    <dl id="definition">
+        <dt>What are constellations?</dt>
+        <dd style="font-size: 30px;">
+            Constellations are a group of stars forming a recognizable pattern that are traditionally named after 
+            their apparent form or identified with a mythological figure. This webpage shows and explains some of the 
+            88 officially recognized constellations. The below image consists of the constellations that are discussed. Click on a
+            constellation for more information.
+        </dd>
+    </dl>
+    <!-- image that has mapping areas -->
+    <img src="images/constellations.jpg" alt= "constellations" id = "constellations" usemap="#constellationMap">
+
+    <!-- Areas that are needed to be mapped -->
+    <map name="constellationMap">
+        <area shape="rect" coords="52,16,225,208" alt = "aries" href="#aries">
+        <area shape="rect" coords="252,16,503,221" alt = "taurus" href="#taurus">
+        <area shape="rect" coords="538,19,748,231" alt = "gemini" href="#gemini">
+        <area shape="rect" coords="793,21,955,216" alt = "cancer" href="#cancer">
+        <area shape="rect" coords="11,253,250,458" alt = "leo" href="#leo">
+        <area shape="rect" coords="273,255,509,460" alt = "virgo" href="#virgo">
+        <area shape="rect" coords="547,251,728,447" alt = "libra" href="#libra">
+        <area shape="rect" coords="781,243,976,465" alt = "scorpius" href="#scorpius">
+        <area shape="rect" coords="24,489,254,683" alt = "sagittarius" href="#sagittarius">
+        <area shape="rect" coords="282,497,492,691" alt = "capricornus" href="#capricornus">
+        <area shape="rect" coords="515,495,754,691" alt = "aquarius" href="#aquarius">
+        <area shape="rect" coords="777,492,986,696" alt = "pisces" href="#pisces">
+
+    </map>
+    <!-- each subtopic has been included in different fieldset so it will be contrastable by changing class name -->
+<div id = "content">
+  <span id = "aries"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Aries</legend>
+        <img src="images/Aries.jpg" alt="Aries" style="float: left;">
+        <p>Aries is the 39th largest constellation in the night sky. Aries has just six stars making them quite dim. 
+           Aries can be seen best in the month of December in the northern hemisphere.</p>
+    </fieldset>
+
+    <span id = "taurus"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Taurus</legend>
+        <img src="images/Taurus.jpg" alt="Taurus" style="float:right;">
+        <p>Taurus the bull is the 17th largest constellation in the night sky. One of the brightest stars, Aldebaran, is 
+            located in this constellation. It could be seen between Fall and Spring in the northern hemisphere. </p>
+    </fieldset>
+
+    <span id = "gemini"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Gemini</legend>
+        <img src="images/Gemini.jpg" alt="Gemini" style="float: left;">
+        <p>Gemini is the 30th largest constellation in the night sky. The word “Gemini” means twins in Latin. It can 
+            be seen in the winter months from the northern hemisphere. </p>
+    </fieldset>
+
+    <span id = "cancer"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Cancer</legend>
+        <img src="images/Cancer.jpg" alt="Cancer" style="float:right;">
+        <p>Cancer is the dimmest of the 12 constellations in the night sky. One of the famous exoplanets, ‘Cancri 55 
+            e’, also known as the ‘diamond world’ is located in this constellation. Cancer will be seen in early spring 
+            in the northern hemisphere.</p>
+    </fieldset>
+
+    <span id = "leo"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Leo</legend>
+        <img src="images/Leo.jpg" alt="Leo" style="float: left;">
+        <p>Leo is the 12th largest of all constellations in the night sky. Leo is the most prominent constellation in the 
+            night sky. Leo the lion can be seen from anywhere except Antartica. This could be seen during the spring 
+            in the northern hemisphere.</p>
+    </fieldset>
+
+    <span id = "virgo"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Virgo</legend>
+        <img src="images/Virgo.jpg" alt="Virgo" style="float:right;">
+        <p>Virgo is the 2nd largest constellation in the night sky. Virgo means ‘the virgin’ in Latin. It is visible in the 
+            northern hemisphere during spring and summer. </p>
+    </fieldset>
+
+    <span id = "libra"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Libra</legend>
+        <img src="images/Libra.jpg" alt="Libra" style="float: left;">
+        <p>Libra means “weighinhg scales” in Latin. It is best seen in the northern hemisphee in the late spring or 
+            early summer. It is the only constellation of the Zodiac to be named after an inanimate object rather 
+            than an animal or a character. It is located in the northern hemisphere in late spring / early summer.</p>
+    </fieldset>
+
+    <span id = "scorpius"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Scorpius</legend>
+        <img src="images/Scorpius.jpg" alt="Scorpius" style="float:right;">
+        <p>Scorpius is one of the brightest constellations in the sky. The Latin word ‘Scorpius’ is translated to 
+            ‘scorpion’ in English. It could be observed close to the southern horizon in the northern hemisphere.
+            </p>
+    </fieldset>
+
+    <span id = "sagittarius"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Sagittarius</legend>
+        <img src="images/Sagittarius.jpg" alt="Sagittarius" style="float: left;">
+        <p>Sagittarius is the 15ht largest constellation in the night sky. Sagittarius is the Latin name of archer. It is 
+            best viewed in August.
+            </p>
+    </fieldset>
+
+    <span id = "capricornus"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Capricornus</legend>
+        <img src="images/Capricornus.jpg" alt="Capricornus" style="float:right;">
+        <p>Capricornus is the 40th brightest constellation. The name ‘Capricornus’ was originated from Latin 
+            meaning the ‘goat horn’. It could be best viewed during the month of September. </p>
+    </fieldset>
+
+    <span id = "aquarius"><br><br><br></span>
+    <fieldset class = "odd">
+        <legend>Aquarius</legend>
+        <img src="images/Aquarius.jpg" alt="Aquarius" style="float: left;">
+        <p>Aquarius is the 10th largest constellation in the night sky. It is best viewed during October.</p>
+    </fieldset>
+
+    <span id = "pisces"><br><br><br></span>
+    <fieldset class = "even">
+        <legend>Pisces</legend>
+        <img src="images/Pisces.jpg" alt="Pisces" style="float:right;">
+        <p>Pisces is the 14th largest constellation in the night sky. Pisces is the Latin word for fish. Pisces can be seen 
+            in autumn in the northern hemisphere.</p>
+    </fieldset>
+</div>
+
+  
+    <footer>
+      <div class="footer">
+        <p>&copy; 2023 Astronomia</p>
+        <nav>
+          <a href="about.html">About</a> |
+          <a href="contact.html">Contact</a> |
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a> 
+        </nav>
+      </div>
+      <div class="socialicons">
+        <a href="https://www.facebook.com">
+          <img src="images/Facebook.png" alt="facebook">
+        </a>
+        <a href="https://twitter.com">
+          <img src="images/Twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.instagram.com">
+          <img src="images/Instagram.png" alt="instagram">
+        </a>
+      </div>
+      <div class="backtotop">
+        <a href="#">
+            <img src="images/arrow.png" alt="back to top">
+        </a>
+      </div>
+      <div class="editor">
+        <a href="PageEditor.html">
+          <img src="images/editor.png" alt="editor">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

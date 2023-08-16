@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!-- says that this is a html5 document -->
+<html lang="en"> <!-- language = english -->
+  <head>
+    <meta charset="UTF-8"> <!-- unicode transformation format 8-bit -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- controls how the webpage is displayed -->
+    <link rel="icon" type="image/x-icon" href="logo11-01-logofavicon.png">  <!-- favicon aka tab icon to appear in the tab  -->
+    <title>Astronomia</title> <!-- tite of the webpage  -->
+    <link rel="stylesheet" href="styles.css"> <!-- external stylesheet -->
+    <link rel="stylesheet" href="homestyle.css"> <!-- stylesheet for this page -->
+  </head>
+  <body>
+    <div class="header"> <!-- class for header -->
+      <a href="cw.html">  <!-- links the logo to home page -->
+      <img id="logo" src="logo11-01names1s.png" alt="logo"> <!-- website logo in name format -->
+      </a>
+      <ul id="navigation"> <!-- unordered list for the navigation bar -->
+        <li>
+          <a href ="cw.html" class="active">Home</a> <!-- links the home section in navigation bar with the home page and makes it the active page -->
+        </li>
+        <li>
+          <a href="BuyProducts.html">Shop</a>  <!-- links to the shop  -->
+        </li>
+        <li>
+          <a href="TakeQuiz.html">Quiz</a> <!-- links to the quiz -->
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a> <!-- links to the gallery -->
+        </li>
+        <li>
+          <a href="sitemap.html">Site map</a> <!-- link to the site map -->
+        </li>
+        <li>
+          <a href="commentform.html">Feedback</a> <!-- links to the feedback form -->
+        </li>
+        <li>
+          <a href="team.html">About us</a> <!-- links to the about us page -->
+        </li>
+      </ul>
+    </div>
+    <video autoplay muted loop id="background"> <!-- a video for the background of the homepage with a play/pause button -->
+      <source src="html-background-video.mp4" type="video/mp4"> <!-- links the video --> 
+    </video>
+    <div class="content"> <!-- class for the play pause button -->
+      <button id="playpause" onclick="playpause()"> <!-- button and calls the javascript function -->
+        Pause
+      </button>
+    </div>
+    <section class="topics"> <!-- a section that links to the content pages -->
+      <div class="topic1"> <!-- content page 1 -->
+        <h2>Planets</h2>
+        <a href="planets.html">
+          <img src="Planets-globes.jpg" alt="planets"> <!-- an image for topic 1 this also links to content page 1 -->
+        </a>
+        <div class="textbox1"> <!-- a brief explanation about content page 1  -->
+          <p>Planets are celestial bodies that orbit around stars, including our Sun. These spherical objects lack nuclear fusion to become stars themselves. In our solar system, there are eight recognized planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. They differ in size, composition, and atmosphere. While rocky planets like Earth are solid with thin atmospheres, gas giants such as Jupiter are predominantly composed of hydrogen and helium. Planets play a crucial role in maintaining the balance of gravitational forces within solar systems and offer potential insights into understanding the formation and evolution of planetary systems in the universe. </p>
+          <a href="planets.html"> <!-- added a see more to link to content page 1 -->
+            <img src="see.png" alt="see more">
+          </a>
+        </div>
+      </div>
+      <div class="topic2">  <!-- content page 2 -->
+        <h2>Galaxies </h2> 
+        <a href="galaxies.html">
+          <img src="Galaxies.jpg" alt="galaxies"><!-- an image for topic 2 this also links to content page 2 -->
+        </a>
+        <div class="textbox2"> <!-- a brief explanation about content page 2 -->
+          <p> Galaxies are vast systems composed of stars, gas, dust, and dark matter, bound together by gravity. They are the building blocks of the universe, containing billions to trillions of stars and stretching across immense distances. The three main types are spiral, elliptical, and irregular. Gravity plays a crucial role, shaping galaxies into unique structures. The Milky Way is our home galaxy, and countless others exist throughout the cosmos. These celestial marvels play a fundamental role in cosmic evolution, serving as hubs of stellar birth, life, and death. Studying galaxies helps us understand the universe's history and its ongoing expansion. </p>
+          <a href="galaxies.html"> <!-- added a see more to link to content page 2 -->
+            <img src="see.png" alt="see more">
+          </a>
+        </div>
+      </div>
+      <div class=" topic3"> <!-- content page 3 -->
+        <h2>Constellations</h2>
+        <a href="Constellations.html"> <!-- added a see more to link to content page 3 -->
+          <img src="Constellations.jpg" alt="constellations"> <!-- an image for topic 3 this also links to content page 3 -->
+        </a>
+        <div class="textbox3"> <!-- a brief explanation about content page 3 -->
+          <p> Constellations are patterns of stars that appear to form recognizable shapes in the night sky. Throughout human history, they have played significant roles in navigation, storytelling, and mythology. These celestial configurations are composed of stars that may not be physically related but appear close to each other from our vantage point on Earth. Some famous constellations include Orion, Ursa Major (containing the Big Dipper), and the Southern Cross. These awe-inspiring formations connect cultures worldwide, inspiring wonder and curiosity about the universe. Astronomers use constellations as reference points to map the sky and locate celestial objects, enriching our understanding of the cosmos. </p>
+          <a href="Constellations.html"> <!-- added a see more to link to content page 3 -->
+            <img src="see.png" alt="see more">
+          </a>
+        </div>
+      </div>
+      <div class="topic4"> <!-- content page 4 -->
+        <h2>Black Holes</h2>
+        <a href="blackhole.html"> <!-- added a see more to link to content page 4 -->
+          <img src="Blackholes.jpg" alt="black holes"> <!-- an image for topic 4 this also links to content page 4 -->
+        </a>
+        <div class="textbox4"> <!-- a brief explanation about content page 4 -->
+          <p> Black holes are astronomical objects with intense gravitational forces that result from the collapse of massive stars. They possess such strong gravity that nothing, not even light, can escape their event horizon, making them invisible to direct observation. Black holes come in different sizes, ranging from stellar-mass black holes to supermassive ones found at the centers of galaxies. As matter falls into a black hole, it forms an accretion disk emitting high-energy radiation. These enigmatic entities play a crucial role in understanding the cosmos, impacting nearby objects, and influencing galaxy evolution, making them fascinating yet mysterious objects of study in astrophysics. </p>
+          <a href="blackhole.html"> <!-- added a see more to link to content page 4 -->
+            <img src="see.png" alt="see more">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="contactform"> <!-- a contact form -->
+      <div class="details"> <!-- contact form details -->
+        <h2>Feel free to ask anything.</h2>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <a href="mailto:savinpathirana@gmail.com">Send Message</a> <!-- send button -->
+      </div>
+      <div class="mapdetails"> <!-- location details -->
+        <h2>Our location</h2>
+        <p>Colombo,Sri lanka</p> <!-- address and iframe for the address -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1177.5250917492392!2d79.8610806749901!3d6.9256425097484104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1688272157104!5m2!1sen!2slk" width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <footer> <!-- footer -->
+      <div class="footer">
+        <p>&copy; 2023 Astronomia</p> 
+        <nav>
+          <a href="about.html">About</a> | <!-- links to the about page -->
+          <a href="contact.html">Contact</a> |  <!-- links to the contact page -->
+          <a href="privacy.html">Privacy Policy</a> |  <!-- links to privacy policy page -->
+          <a href="terms.html">Terms of Service</a>  <!-- links to terms of service page -->
+        </nav>
+      </div>
+      <div class="socialicons"> <!-- social media icons -->
+        <a href="https://www.facebook.com"> <!-- links to facebook -->
+          <img src="facebook.png" alt="facebook">
+        </a>
+        <a href="https://twitter.com"> <!-- links to twitter -->
+          <img src="twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.instagram.com"> <!-- links to instagram -->
+          <img src="instagram.png" alt="instagram">
+        </a>
+      </div>
+      <div class="backtotop"> <!-- back to top function -->
+        <a href="#">
+            <img src="arrowhead-up.png" alt="back to top">
+        </a>
+      </div>
+      <div class="editor"> <!-- page editor -->
+        <a href="page-editor2.html"> <!-- links to the page editor page -->
+          <img src="editor.png" alt="editor">
+        </a>
+      </div>
+    </footer>
+    <script> /* javascript code for the play pause button used in the video */
+      var video = document.getElementById("background");
+      var btn = document.getElementById("playpause");
+      
+      function playpause() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+
+h1{
+    text-align: left;
+    font-weight: bold;
+    color: white;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+  
+#bhcontent {
+    width: 68%;
+    height: 80%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: large;
+    background-color: #f2f2f2b7;
+}
+#bhimg{
+    width: 24%;
+    height: 80%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: large;
+    background-color: #f2f2f2b7;
+}
+.bhimg1 img{
+    width: 96%;
+    height: 40%;
+}
+.bhimg2 img{
+    width: 96%;
+    height: 40%;
+}

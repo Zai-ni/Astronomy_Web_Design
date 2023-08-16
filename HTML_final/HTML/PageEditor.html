@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Editor</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /*To do the styling part for the student details given in the top  */
+        #details{ 
+            position: relative;
+            top: 20px;
+            text-align: center;
+            font-size: 30px;
+            background-color: rgba(84, 150, 136, 0.5);
+            color: rgb(77, 40, 111);
+        }
+        /* Each topic is included inside the fieldset to style it and also transition*/
+        fieldset{
+                width:1770px;
+                margin-top: 50px;
+                margin-left: 50px;
+                padding-bottom: 30px;
+                margin-bottom: 50px;
+                border-radius: 12px;
+                font-size: 35px;
+                transition:transform 0.05s ease-in-out;
+            }
+            /* To transform bigger when a topic is been hover */
+            fieldset:hover{
+                transform: scale(1.02);
+            }
+            /* to change the font size of the title on the legend */
+            legend{
+                font-size: 40px;
+            }
+            /* class odd and even are used to alternate the styles one by another */
+            .odd{        
+                background-color:rgba(188, 79, 247, 0.5) ;
+                color: rgb(21, 21, 101);
+                text-align: justify;
+                font-weight: bold;
+                
+            }
+            .even{                
+                background-color: rgba(21, 21, 101,0.5); 
+                color: rgb(188, 79, 247);
+                text-align: justify;
+                font-weight: bold;
+            }
+            
+    </style>
+  </head>
+  <body>
+    
+   <!-- The section that consists name and student role -->
+    <div id = "details">
+        <hr>
+        <p>Thilaganathan Prajoathayan<br> Student Role 1<br>The following pages were done by me </p>
+        <hr>
+    </div> 
+    <!-- Each fieldset represents link to webpages -->
+    <a href="PresentationSlide.html"><fieldset class = "odd" id = "presentation">
+        <legend>Presentation Slide</legend>
+        <img src="images/present-webpage.png" alt="Presentation" style="float: left;">
+        <p>This page will be redirected to the Home Page in 4 seconds. It contains the title of our website and details 
+            of All members.
+        </p>
+    </fieldset>
+    </a>
+
+    <a href="Constellations.html"><fieldset class = "even" id = "content">
+        <legend>Content Page</legend>
+        <img src="images/con-webpage.png" alt="Content" style="float: right;">
+        <p>The content page is about Constellations, this was created using html and CSS tags and also conatins an 
+            Image which has selected areas to navigate through the Web page using Image Maps. 
+        </p>
+    </fieldset>
+    </a>
+
+   <a href="BuyAProducts.html"><fieldset class = "odd" id = "store">
+        <legend>Buy Products Page</legend>
+        <img src="images/store-webpage.png" alt="Store" style="float: left;">
+        <p>This page contains objects that for sale, this was created using html, CSS and JavaScript which will be checking 
+            whether all the requried details are given also checks whether the given details are valid by checking some criteria.
+        </p>
+    </fieldset>
+    </a>
+
+
+    <a href= #details><fieldset class = "even" id = "editor">
+        <legend>Page Editor</legend>
+        <img src="images/editor-page.png" alt="Editor" style="float: right;">
+        <p>This is the page which been currently viewed, this contains areas which will redirect to all the webpages 
+            created by myself and also brief description about them.
+        </p>
+    </fieldset>
+    </a>
+  
+  </body>
+</html>

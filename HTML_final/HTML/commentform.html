@@ -1,0 +1,172 @@
+<!DOCTYPE html> <!-- says that this is a html5 document -->
+<html lang="en"> <!-- language = english -->
+    <head>
+        <meta charset="UTF-8"> <!-- unicode transformation format 8-bit -->
+        <title>Feedback Form</title> <!-- tite of the webpage  -->
+        <link rel="stylesheet" href="styles.css"> <!-- external stylesheet -->
+        <link rel="stylesheet" href="commentscss.css"> <!-- stylesheet for this page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- controls how the webpage is displayed -->
+        <link rel="icon" type="image/x-icon" href="logo11-01-logofavicon.png"> <!-- favicon aka tab icon to appear in the tab  -->
+    </head>
+    <body>
+        <div class="header"> <!-- class for header -->
+          <a href="cw.html"> <!-- links the logo to home page -->
+            <img id="logo" src="logo11-01names1s.png" alt="logo"> <!-- website logo in name format -->
+          </a>
+            <ul id="navigation"> <!-- unordered list for the navigation bar -->
+              <li>
+                <a href="cw.html">Home</a> <!-- links the home section in navigation bar with the home page -->
+              </li>
+              <li>
+                <a href="BuyProducts.html">Shop</a> <!-- links to the shop  -->
+              </li>
+              <li>
+                <a href="TakeQuiz.html">Quiz</a> <!-- links to the quiz -->
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a> <!-- links to the gallery -->
+              </li>
+              <li>
+                <a href="sitemap.html">Site map</a> <!-- link to the site map -->
+              </li>
+              <li>
+                <a href="commentform.html" class="active">Feedback</a> <!-- links to the feedback form and makes it the active page -->
+              </li>
+              <li>
+                <a href="team.html">About us</a> <!-- links to the about us page -->
+              </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="commentsheet"> <!-- a class for the commentsheet -->
+          <form id="Feedback" method="post" action="mailto:savinpathirana@gmail.com">  <!-- form with the action that will send a mail when the submit button is clicked -->
+            <label>
+              How satisfied were you with our website today?
+              <br>
+              Choose from a scale of 0 to 10,where 0 is extremely dissatisfied and 10 is extremely satisfied.
+              <br>
+              <br>
+            </label>
+            <div class="ratingbar"> <!-- a class for the rating section that will get the user rating -->
+              <label for="rating0">0<br>
+              <input type="radio" name="rating" id="rating0" value="0">
+              </label>
+              <label for="rating1">1<br>
+              <input type="radio" name="rating" id="rating1" value="1">
+              </label>
+              <label for="rating2">2<br>
+              <input type="radio" name="rating" id="rating2" value="2">
+              </label>
+              <label for="rating3">3<br>
+              <input type="radio" name="rating" id="rating3" value="3">
+              </label>
+              <label for="rating4">4<br>
+              <input type="radio" name="rating" id="rating4" value="4">
+              </label>
+              <label for="rating5">5<br>
+              <input type="radio" name="rating" id="rating5" value="5">
+              </label>
+              <label for="rating6">6<br>
+              <input type="radio" name="rating" id="rating6" value="6">
+              </label>
+              <label for="rating7">7<br>
+              <input type="radio" name="rating" id="rating7" value="7">
+              </label>
+              <label for="rating8">8<br>
+              <input type="radio" name="rating" id="rating8" value="8">
+              </label>
+              <label for="rating9">9<br>
+              <input type="radio" name="rating" id="rating9" value="9">
+              </label>
+              <label for="rating10">10<br>
+              <input type="radio" name="rating" id="rating10" value="10">
+              </label>
+            </div>
+            <label>
+              Please could you tell us your reasons for giving this rating?
+            </label>
+            <br>
+            <textarea id="reasontext" name="reason" rows="5" cols="50" required></textarea> <!-- a textarea that will ask the user for the reason for his/her rating -->
+            <br>
+            <br>
+            <div class="dropdown">
+              <label>How did you want to complete this task today? (optional)</label> <!-- one of the optional questions with a dropdown select -->
+              <br>
+              <select id="drop" name="methodused"> 
+                <option value="" disabled selected>--Please select--</option>
+                <option value="Phone">Phone</option>
+                <option value="Website">Website</option> 
+                <option value="Webchat">Webchat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
+              </select> 
+              <br>
+              <br>
+              <label>If you had to do this task again.How would you prefer to do it? (optional)</label> <!-- one of the optional questions with a dropdown select -->
+              <br>
+              <select id="dropnext" name="methodnext">
+                <option value="" disabled selected>--Please select--</option>
+                <option value="Phone">Phone</option>
+                <option value="Website">Website</option> 
+                <option value="Webchat">Webchat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
+              </select> 
+            </div>
+            <br>
+            <button type="submit" value="Submit">Submit</button> <!-- submit button -->
+            <button type="reset"  value="Reset">Reset</button> <!-- reset button -->
+          </form>
+        </div>
+        <footer> <!-- footer -->
+          <div class="footer">
+            <p>&copy; 2023 Astronomia</p>
+            <nav>
+              <a href="about.html">About</a> | <!-- links to the about page -->
+              <a href="contact.html">Contact</a> | <!-- links to the contact page -->
+              <a href="privacy.html">Privacy Policy</a> | <!-- links to privacy policy page -->
+              <a href="terms.html">Terms of Service</a>  <!-- links to terms of service page -->
+            </nav>
+          </div>
+          <div class="socialicons"> <!-- social media icons -->
+            <a href="https://www.facebook.com"> <!-- links to facebook -->
+              <img src="facebook.png" alt="facebook">
+            </a>
+            <a href="https://twitter.com"> <!-- links to twitter -->
+              <img src="twitter.png" alt="twitter">
+            </a> 
+            <a href="https://www.instagram.com"> <!-- links to instagram -->
+              <img src="instagram.png" alt="instagram">
+            </a>
+          </div>
+          <div class="backtotop"> <!-- back to top function -->
+            <a href="#">
+                <img src="arrowhead-up.png" alt="back to top">
+            </a>
+          </div>
+          <div class="editor"> <!-- page editor -->
+            <a href="page-editor2.html"> <!-- links to the page editor page -->
+              <img src="editor.png" alt="editor">
+            </a>
+          </div>
+        </footer>
+        <script> /* javascript code to check whether the user has selected a rating if selecter then will show the thank you alert */
+          const formcheck = document.querySelector("#Feedback");
+          
+          formcheck.addEventListener("submit", function (event){
+            const ratingbarcheck = document.querySelector('input[name="rating"]:checked');
+            
+            if(!ratingbarcheck){
+              alert("Please select a rating.");
+              event.preventDefault();
+            }
+            else{
+              alert("Thankyou for your Submission.")
+            }
+          });
+        </script>
+    </body>
+</html>

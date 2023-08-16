@@ -1,0 +1,70 @@
+
+
+.card{
+  display: inline-block; /* Set display to inline-block to have the cards display next to each other */
+  margin: 10px; /* Add some spacing between the cards */
+  width: 400px;
+  margin-top: 300px;
+  color:rgb(204, 201, 201);
+  background-image:url(http://4.bp.blogspot.com/-KKRpOOVKCPk/UCvGfehL1XI/AAAAAAAAHZY/53h7NaN2UI4/s1600/Galaxy+Wallpapers+9.jpg);
+  background-size: cover;
+  padding: 10rem 50 0;
+  max-width:50ch;
+  border-radius: 1.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top:5px;
+  margin-bottom: 85px;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card-content{
+  --padding:0.5rem;
+  padding:var(--padding);
+  background:linear-gradient(
+    hsla(0, 10%, 94%, 0),
+    hsla(0, 10%, 94%, 0.3) 20%,
+    hsl(0, 15%, 95%),
+  );
+  transform:translateY(45%);
+  transition: transform 500ms ease;
+}
+
+
+.card:hover .card-content{
+  transform:translateY(0);
+}
+
+.card:hover .card-title::after{
+  transform:scalex(1);
+}
+
+.card-body{
+  color:rgba(227, 221, 221, 0.85);
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 0.5em 1.25em;
+  border-radius: 3px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #0056b3;
+}

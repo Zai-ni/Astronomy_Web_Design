@@ -1,0 +1,37 @@
+
+h1{
+    text-align: left;
+    font-weight: bold;
+    color: white;
+}
+.container {
+    text-align: center;
+    background-color: rgba(222, 184, 135, 0.644);
+    width: 90%;
+    height: 80%;
+    padding: 5%;
+    border-radius: 20px;
+}
+.task {
+    text-align: center;
+    background-color: rgba(248, 247, 245, 0.644);
+    width: 90%;
+    height: 60%;
+    padding: 5%;
+    border-radius: 20px;
+}
+.task a{
+    font: 2em times;
+    color: black;
+    text-decoration: none;
+}
+.task a:hover { color: white;}
+.task p {
+    font: 1.5em times;
+}
+
+.student4 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

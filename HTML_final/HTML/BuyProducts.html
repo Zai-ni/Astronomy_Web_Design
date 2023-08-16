@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Store</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="logo11-01-logofavicon.png">
+
+        <style>
+            /* To position store logo and Store text */
+            #storeLogo{
+                clear: both;
+            position: relative;
+            top: 135px;
+            left: 840px;
+            padding-right: 10px;
+            } 
+            #storeText{  
+                clear: both;
+                margin-left: 950px;
+                margin-top: 65px;
+            }          
+            /* To position the info button next to product name nad style it */
+            .product input[type = button]{
+            position: relative;
+            top: -3px;
+            margin-left: 5px;
+            font-size: 15px;
+            font-weight: bold;           
+            color: blue;
+            border-radius: 65%;
+            }   
+            /* To style and position the quantity field */
+            .product input[type = number]{
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color:white;
+                background-color: rgb(41, 41, 255);
+
+            }
+            /* To zoom the product when hover over */
+            .product:hover{
+                transform:scale(1.1);
+                background-color:rgba(188, 79, 247, 0.5) ;
+            }
+            /* To position and style the each product blocks */
+            .product{
+                float:left;
+                margin: 0px 10px 0px 10px ;
+                width: 340px;
+                height: 500px;
+                background-color: rgba(188, 79, 247, 0.2);
+                transition:transform 0.05s ease-in-out;
+                text-align: center;
+                font-size: 25px;
+                border-radius: 12px;
+            }
+            /* To add padding for product images */
+            #educational img, #other img{
+                padding: 20px;
+            }
+            /* To combine 5 product in a fieldset and center it */
+            fieldset{
+                width:1800px;
+                margin-left: 50px;
+                padding-bottom: 40px;
+                margin-bottom: 50px;
+                border-radius: 12px;
+            }
+            /* to change the styling of price text  */
+            .priceTag{
+                color: rgb(41, 41, 255);
+                font-size: 40px;
+                font-weight: bold;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            /* To style the button of submit and reset */
+            .positive, .negative{
+            float: right;
+            margin-right: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            background-color: rgb(188, 79, 247);
+            border-radius: 25px;
+            transition:transform 0.05s ease-in-out;
+            width: 230px;
+            }
+            /* the next two styles are used to change colours of buttons and also tranform bigger while hover  */
+            .positive:hover{
+                background-color: green;
+                transform: scale(1.1);
+                
+            }
+            .negative:hover{
+                background-color: red;
+                transform: scale(1.1);
+                
+            }
+            /* the next three styles are used for positioning and styling the info text when the button is hovered */
+            .info {
+                position: relative;
+                display: inline-block;
+            }
+            .info .infoText {
+                visibility: hidden;
+                opacity: 0;
+                width: 300px;
+                background-color: #262626;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                position: absolute;
+                bottom: 125%;                
+                margin-left: -250px;                
+                transition: opacity 0.3s;
+            }
+            .info:hover .infoText {
+                visibility: visible;
+                opacity: 1;
+            }
+            /* To resize and position the images displayed on the cart */
+             .cartImg{
+                max-height: 150px;
+                max-width: 150px;
+                margin-left: 100px;
+                padding-top: 10px;
+                margin-right:200px; 
+                
+            } 
+            /* To change the font size and position of CART text */
+             #cart{
+                text-align: center;
+                font-size: 70px;
+                clear:both;
+                margin-top: 150px;
+                margin-bottom: -30px;
+            }
+            /* to position the quantity inside the cart  */
+            .cartQuantity{
+                position: relative;
+                top: -70px;
+                left: 100px;
+                font-size: 30px;
+                margin-right:200px;
+            }
+            /* to position the price inside the cart  */
+            .cartPrice{
+                position: relative;
+                top: -70px;
+                left: 150px;
+                font-size: 30px;
+                margin-right: 200px;
+            }
+            /* to position the total price inside the cart  */
+            .cartTotalPrice{
+                position: relative;
+                top: -70px;
+                left: 200px;
+                font-size: 30px;
+            } 
+            /* The next two styles will display the cart as none until the products are been added to the cart and also to alternate style  */
+            .cart .odd{        
+                background-color:rgba(188, 79, 247, 0.3) ;
+                display: none;
+            }
+            .cart .even{                
+                background-color: rgba(41, 41, 255,0.3); 
+                display: none;
+            }
+            /* class odd and even are used to alternate the styles one by another */
+            .odd{        
+                background-color:rgba(188, 79, 247, 0.3) ;
+                
+            }
+            .even{                
+                background-color: rgba(41, 41, 255,0.3); 
+                
+            }
+            /* to position the net total  */
+            #netTotal{
+                margin-top: -2px;
+                margin-bottom: 50px;
+                padding-left: 1260px;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            /* To style, position and display it none until the order is confirmed */
+            form{
+                display: none;
+                font-size: 20px;
+                background-color:rgba(140, 140, 140, 0.6);     
+                width: 555px;  
+                position: relative;
+                left: 680px;
+                height: 1900px;
+                top: 100px;
+            
+            }
+            form fieldset{
+            width: 500px;
+            margin-left: 10px;                
+            }
+        </style>
+    </head>
+
+
+<body>
+    <div class="header">
+        <a href="cw.html">
+          <img id="logo" src="images/logo.png" alt="logo">
+        </a>
+          <ul id="navigation">
+            <li>
+              <a href="cw.html">Home</a>
+            </li>
+            <li>
+              <a href="BuyProducts.html">Shop</a>
+            </li>
+            <li>
+              <a href="TakeQuiz.html">Quiz</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="sitemap.html">Site map</a>
+            </li>
+            <li>
+              <a href="commentform.html">Feedback</a>
+            </li>
+            <li>
+              <a href="team.html">About us</a>
+            </li>
+          </ul>
+      </div>
+<!-- display the logo and the text  -->
+  <img src="images/Store Logo.png" alt="Store" id = "storeLogo">
+  <h1 id = "storeText">STORE</h1>
+<fieldset>
+    <legend><h1 style="font-size: 30px;">Educational Items</h1></legend>
+<!-- All the products have been seperated using div and also given ids to call them in JavaScript -->
+  <div id = educational>
+    <div class = "product" id = "product1">
+        <img src="images/Telescope 2.jpg" alt="TELESCOPE 1" height = "300px" width = "300px" id = "img1">
+            TELESCOPE 1
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">Celestron - 70mm Travel Scope - Portable Refractor Telescope -
+                 Fully-Coated Glass Optics - Ideal Telescope for Beginners - BONUS Astronomy Software Package</span>
+        </div> 
+        <div class = "priceTag">$ <span class = "price">109</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product2">
+        <img src="images/Telescope 1.jpg" alt="TELESCOPE 2" height = "300px" width = "300px" id = "img2">
+        TELESCOPE 2
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">Telescopes for Adults, 70mm Aperture and 700mm Focal Length 
+                Professional Astronomy Refractor Telescope for Kids and Beginners - with EQ Mount, 
+                2 Plossl Eyepieces and Smartphone Adapter</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">299</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product3">
+        <img src="images/Solar System Kit.jpg" alt="SOLAR SYSTEM MODEL" height = "300px" width = "300px" id = "img3">
+        SOLAR SYSTEM MODEL
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">4M 3D Glow-in-the-Dark Solar System Mobile Making Kit - DIY Science 
+                Astronomy Learning Stem Toys Educational Gift for Kids & Teens, Girls & Boys</span>
+        </div> 
+        <div class = "priceTag">$ <span class = "price">24</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product4">
+        <img src="images/book.jpg" alt="HUBBLE LEGACY BOOK" height = "300px" width = "300px" id = "img4">
+        HUBBLE LEGACY BOOK
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">Hubble Legacy: 30 Years of Discoveries and Images</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">27</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product5">
+        <img src="images/book 2.jpg" alt="WHAT WE SEE IN THE STARS" height = "300px" width = "300px" id = "img5">
+        <span style="font-size: 20px;">WHAT WE SEE IN THE STARS</span>
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">What We See in the Stars: An Illustrated Tour of the Night Sky</span>
+        </div> 
+        <div class = "priceTag">$ <span class = "price">16</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend><h1 style="font-size: 30px;">Other Items</h1></legend>
+
+  <div id = other>
+    <div class = "product" id = "product6">
+        <img src="images/Moon Light.jpg" alt="LIGHT 1" height = "300px" width = "300px" id = "img6"> 
+        LIGHT 1
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">CPLA Moon Lamp 2023 Upgrade with Timing- 3D Printing Moon Night Light for
+                 Kids Adults Bedroom Space Decor Cool Gifts for Girls Boys- 
+                 Wooden Stand & Remote/Touch Control 4.8 inch (Small)</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">19</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product7">
+        <img src="images/Solar Light.jpg" alt="LIGHT 2" height = "300px" width = "300px" id = "img7">
+        LIGHT 2
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">3D Solar System Model 3.15 inch Crystal Ball Laser Engraving Holographic 
+                Belt LED Colorful Lighting Touch lamp Holder Planet Model Gift Science Astronomy Lovers 
+                Night Lights</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">25</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product8">
+        <img src="images/Projector light.jpg" alt="LIGHT 3" height = "300px" width = "300px" id = "img8">
+        LIGHT 3
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">The Largest Coverage Area Galaxy Lights Projector 2.0, FLITI Star Projector,
+                 with Changing Nebula and Galaxy Shapes Galaxy Night Light</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">39</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0"  class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product9">
+        <img src="images/Wine Glass.jpg" alt="WINE GLASS" height = "300px" width = "300px" id = "img9">
+        WINE GLASS
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">Greenline Goods Virgo Stemless Wine Glasses Zodiac Virgo Set Hand
+                 Etched 15 oz (Set of 2) - Astrology Sign Glassware</span>
+        </div>  
+        <div class = "priceTag">$ <span class = "price">29</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0" class = "quantity">
+        </div>
+    </div>
+
+    <div class = "product" id = "product10">
+        <img src="images/Solar Decor.jpg" alt="SOLAR SYSTEM DECOR" height = "300px" width = "300px" id = "img10">
+        SOLAR SYSTEM DECOR
+        <div class = "info">    
+            <input type = "button" value = "i">
+            <span class = "infoText">Sunligoo Solar System Planets Office Home Desk Decor Healing Crystals 
+                Stones Gift Kit Natural Tumbled Gemstones Ball Set with Wood Stand for Decoration Chakra 
+                Healing Reiki Good Luck</span>
+        </div> 
+        <div class = "priceTag">$ <span class = "price">21</span></div>
+        <div>
+            <label for = "quantity">Qty:</label>
+            <input type = "number" id = "quantity" name = "quantity" min = "0" max = "5" value = "0" class = "quantity">
+        </div>
+    </div>
+
+    </div>
+</fieldset>
+<!-- Introducing the add to cart and reset button  -->
+<input type="button" id = "addToCart" value = "ADD TO CART" class = "positive">
+<input type="button" id = "resetOrder" value = "RESET" onclick="resetQuantity()" class = "negative">
+
+<!-- allocating space for add to cart and display it as none until a product is added to the cart  -->
+<div class = "cart">
+    <h1 id = "cart" style="background-color:rgba(188, 79, 247, 0.3)"></h1>
+    <div class = "even" id = "cart1">
+        <img src = "" id = "cartImg1" alt="cart1" class = "cartImg">
+        <span id = "quantity1" class = "cartQuantity"></span>
+        <span id = "price1" class = "cartPrice"></span>
+        <span id = "totalPrice1" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "odd" id = "cart2">
+        <img src = "" id = "cartImg2" alt="cart2" class = "cartImg">
+        <span id = "quantity2" class = "cartQuantity"></span>
+        <span id = "price2" class = "cartPrice"></span>
+        <span id = "totalPrice2" class = "cartTotalPrice"></span>
+    </div>
+    
+    <div class = "even" id = "cart3">
+        <img src = "" id = "cartImg3" alt="cart3" class = "cartImg">
+        <span id = "quantity3" class = "cartQuantity"></span>
+        <span id = "price3" class = "cartPrice"></span>
+        <span id = "totalPrice3" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "odd" id = "cart4">
+        <img src = "" id = "cartImg4" alt="cart4" class = "cartImg">
+        <span id = "quantity4" class = "cartQuantity"></span>
+        <span id = "price4" class = "cartPrice"></span>
+        <span id = "totalPrice4" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "even" id = "cart5">
+        <img src = "" id = "cartImg5" alt="cart5" class = "cartImg">
+        <span id = "quantity5" class = "cartQuantity"></span>
+        <span id = "price5" class = "cartPrice"></span>
+        <span id = "totalPrice5" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "odd" id = "cart6">
+        <img src = "" id = "cartImg6" alt="cart6" class = "cartImg">
+        <span id = "quantity6" class = "cartQuantity"></span>
+        <span id = "price6" class = "cartPrice"></span>
+        <span id = "totalPrice6" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "even" id = "cart7">
+        <img src = "" id = "cartImg7" alt="cart7" class = "cartImg">
+        <span id = "quantity7" class = "cartQuantity"></span>
+        <span id = "price7" class = "cartPrice"></span>
+        <span id = "totalPrice7" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "odd" id = "cart8">
+        <img src = "" id = "cartImg8" alt="cart8" class = "cartImg">
+        <span id = "quantity8" class = "cartQuantity"></span>
+        <span id = "price8" class = "cartPrice"></span>
+        <span id = "totalPrice8" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "even" id = "cart9">
+        <img src = "" id = "cartImg9" alt="cart9" class = "cartImg">
+        <span id = "quantity9" class = "cartQuantity"></span>
+        <span id = "price9" class = "cartPrice"></span>
+        <span id = "totalPrice9" class = "cartTotalPrice"></span>
+    </div>
+
+    <div class = "odd" id="cart10">
+        <img src = "" id = "cartImg10" alt="cart10" class = "cartImg">
+        <span id = "quantity10" class = "cartQuantity"></span>
+        <span id = "price10" class = "cartPrice"></span>
+        <span id = "totalPrice10" class = "cartTotalPrice"></span>
+    </div>
+
+    <h1 id = "netTotal" style="background-color: rgba(188, 79, 247, 0.3); "></h1>
+
+</div>
+<!-- Introducing confirm order button which will display the form  -->
+<input type="button" id = "confirmOrder" value = "CONFIRM ORDER" class = "positive" style="display: none; width: 300px;">
+
+
+<!-- all the elements of the form has been introduced -->
+<form id = "form">
+    <fieldset class = "odd">
+
+        <legend>Personal Details</legend>
+        Title: <br>
+        <input type = "radio" name="Title" id = "Mr." value="Mr." required >
+        <label for="Mr.">Mr.</label> 
+        <input type = "radio" name="Title" id = "Mrs." value="Mrs.">
+        <label for="Mr.">Mrs.</label> 
+        <input type = "radio" name="Title" id = "Miss." value="Miss">
+        <label for="Mr.">Miss</label> 
+        <input type = "radio" name="Title" id = "Dr." value="Dr.">
+        <label for="Mr.">Dr.</label> <br><br>
+    
+        <label for = "firstName">First Name:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "Firstname" id = "firstName" size="25"><br><br>
+
+        <label for = "surName">Surname:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "Surname" id = "surName" size="25"><br><br>
+
+        <label for = "age">Age:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "number" name = "Age" id = "age" min = "0" max="100"><br><br>
+        
+    </fieldset>
+
+    <fieldset class = "even">
+
+        <legend>Billing Details</legend>
+                   
+        <label for = "houseNo">House No:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "HouseNo:" id = "houseNo" size="4"><br><br>
+
+        <label for = "streetName"> Street Name:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "StreetName" id = "streetName" size="35"><br><br>
+
+        <label for = "offRoad1">Off Road 1: </label><br>
+        <input type = "text" name = "OffRoad 1" id = "offRoad1" size="35"><br><br>
+
+        <label for = "offRoad2">Off Road 2: </label><br>
+        <input type = "text" name = "OffRoad 2" id = "offRoad2" size="35"><br><br>
+
+        <label for = "city">City:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "City" id = "city" size="25"><br><br>
+        
+        <label for = "district">District:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "District" id = "district" size="25"><br><br>
+
+        <label for = "country">Country: </label><br>
+        <input type = "text" name = "Country" id = "country" size="25" value="Sri Lanka" readonly><br><br>
+
+        <label for = "telephoneNo">Telephone No:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "tel" name = "TelephoneNo" id = "telephoneNo" size="15" placeholder="EX: - 0771234567"
+        ><br><br>
+
+        <label for = "email">Email Address:</label><br>
+        <input type = "email" name = "EmailAddress" id = "email" size="35"><br><br>
+        
+     </fieldset>
+
+     <fieldset class = "odd">
+
+        <legend>Payment Details</legend>
+                   
+        <label for = "products">Products: </label><br>
+        <textarea name = "Total Amount" id = "products" cols="30" rows="5" readonly>
+        </textarea><br><br>
+
+        <label for = "amount">Total Amount: </label><br>
+        <input type = "text" name = "Total Amount" id = "amount" size="5" readonly><br><br>
+
+        <label for = "cardHolder">Card Holder's Name:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "text" name = "CardHolder" id = "cardHolder" size="35"><br><br>
+
+        <label for = "expiry">Expiry:<span style="color: red;"><sup>*</sup></span> </label><br>
+        <input type = "month" name = "Expiry" id = "expiry" size="10"><br><br>
+
+        <span>
+            <label for = "cvc">CVC:<span style="color: red;"><sup>*</sup></span> </label><br>
+            <input type = "text" name = "CVC" id = "cvc" size="4"><br><br>
+        </span>
+                
+     </fieldset>
+<!-- Introducing the submit and reset button to reset the form or to check the validity of the form  -->
+     <input type = "button" value= "SUBMIT" class="positive" onclick="check()">
+     <input type = "button" value= "RESET" class="negative" onclick="resetForm()">
+
+</form>
+
+<footer style="position: relative;top: 100px;">
+    <div class="footer">
+      <p>&copy; 2023 Astronomia</p>
+      <nav>
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a> 
+      </nav>
+    </div>
+    <div class="socialicons">
+      <a href="https://www.facebook.com">
+        <img src="images/Facebook.png" alt="facebook">
+      </a>
+      <a href="https://twitter.com">
+        <img src="images/Twitter.png" alt="twitter">
+      </a>
+      <a href="https://www.instagram.com">
+        <img src="images/Instagram.png" alt="instagram">
+      </a>
+    </div>
+    <div class="backtotop">
+      <a href="#">
+          <img src="images/arrow.png" alt="back to top">
+      </a>
+    </div>
+    <div class="editor">
+      <a href="PageEditor.html">
+        <img src="images/editor.png" alt="editor">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    
+//  To reset the cart, form and get back to the beginning position   
+function resetQuantity (){
+        for (let i = 1; i < 11; i++){
+            let quantity = document.getElementById("product"+i).getElementsByClassName("quantity")[0];
+             quantity.value = 0;
+             document.getElementById("cart"+i).style.display = "none";
+             document.getElementById("quantity"+i).innerHTML = null;
+             document.getElementById("price"+i).innerHTML = null;
+             document.getElementById("totalPrice"+i).innerHTML = null;
+             document.getElementById("netTotal").innerHTML = null;
+        }
+        document.getElementById("confirmOrder").style.display = "none";
+        document.getElementById("cart").innerHTML = null;
+        document.getElementById("form").style.display = "none";
+        resetForm();
+    };
+
+    // To check a product is entered and display the cart, if customer confirms the order the form will be display 
+    document.getElementById("addToCart").addEventListener("click" , function(){
+        let countNotSelected = 0;
+        let countOutOfRange = 0;
+
+        for (let i = 1; i < 11; i++){
+            document.getElementById("cart"+i).style.display = "none";
+            document.getElementById("quantity"+i).innerHTML = null;
+            document.getElementById("price"+i).innerHTML = null;
+            document.getElementById("totalPrice"+i).innerHTML = null;
+            document.getElementById("netTotal").innerHTML = null;
+        }
+
+        
+        for (let i = 1; i < 11; i++){
+            let quantity = document.getElementById("product"+i).getElementsByClassName("quantity")[0];
+            if ( quantity.value == 0 ){
+                countNotSelected += 1;
+            }
+            else if (quantity.value < 0 || quantity.value > 5){
+                countOutOfRange += 1;
+            }
+        }
+
+        if (countNotSelected == 10){
+            alert("None of the Products are Selected");
+        }
+        else if (countOutOfRange > 0){
+            alert("Quantity Entered is Out Of Range, Enter 1 to 5");
+            resetQuantity();
+        }
+        else{
+            
+            document.getElementById("cart").innerHTML = "<hr>CART<hr>";
+             var  netTotal = 0;
+             var items = "";
+             let k = 1;
+            for (let j = 1; j < 11;j++){ 
+                let quantity = document.getElementById("product"+j).getElementsByClassName("quantity")[0].value;
+                if (quantity > 0){     
+            
+            let price = document.getElementById("product"+j).getElementsByClassName("price")[0].innerHTML;
+            let totalPrice = quantity*price;
+             
+            document.getElementById("cart"+k).style.display = "block";
+            document.getElementById("cartImg"+k).src = document.getElementById("img"+j).src;
+            document.getElementById("quantity"+k).innerHTML = "QTY\: " + quantity;
+            document.getElementById("price"+k).innerHTML = "PRICE\:  $ " + price;
+            document.getElementById("totalPrice"+k).innerHTML = "TOTAL PRICE\:  $ " + totalPrice;
+            items = items + "product"+j+" - "+quantity+"x \n";
+            k++;
+            netTotal += totalPrice;
+                }
+            document.getElementById("netTotal").innerHTML = "NETT TOTAL\:  $ " + netTotal;
+            
+            }
+            document.getElementById("confirmOrder").style.display = "block";
+
+            document.getElementById("confirmOrder").addEventListener("click" , function(){
+                document.getElementById("form").style.display = "block";
+                document.getElementById("amount").value = netTotal;
+                document.getElementById("products").value = items;
+
+         })            
+        }
+    });
+// to reset the form except the readonly values  price and products bought
+    function resetForm(){
+        document.getElementById("Mr.").checked = false;
+        document.getElementById("Mrs.").checked = false;
+        document.getElementById("Miss.").checked = false;
+        document.getElementById("Dr.").checked = false;
+        document.getElementById("firstName").value = "";
+        document.getElementById("surName").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("houseNo").value = "";
+        document.getElementById("streetName").value = "";
+        document.getElementById("offRoad1").value = "";
+        document.getElementById("offRoad2").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("district").value = "";
+        document.getElementById("telephoneNo").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("cardHolder").value = "";
+        document.getElementById("expiry").value = "";
+        document.getElementById("cvc").value = "";        
+
+         };
+// Checks the validity in the fields of the form and alert by popups 
+         function check(){
+            var errorCount = 0;
+            if(document.getElementById("Mr.").checked == false && document.getElementById("Mrs.").checked == false &&
+                document.getElementById("Miss.").checked == false && document.getElementById("Dr.").checked == false){
+                    alert("Select the Relevant title");
+                    errorCount += 1;
+                } 
+
+            if(document.getElementById("firstName").value == ""){
+                alert("Enter First Name");
+                errorCount += 1;
+            }else{
+                if (!/^[A-Za-z\s]*$/.test(document.getElementById("firstName").value)){
+                    alert("Enter Valid First Name");
+                    errorCount += 1;
+                }
+            }
+                     
+            if(document.getElementById("surName").value == ""){
+                alert("Enter Surname");
+                errorCount += 1;
+            }else{
+                if (!/^[A-Za-z\s]*$/.test(document.getElementById("surName").value)){
+                    alert("Enter Valid Surname");
+                    errorCount += 1;
+                }
+            }
+
+            if(document.getElementById("age").value >100 || document.getElementById("age").value < 0 || document.getElementById("age").value == ""){
+                alert("Enter Valid Age");
+                errorCount += 1;
+            }else{
+                if(document.getElementById("age").value < 18){
+                    alert("This Store should be handled by 18 or Above");
+                    errorCount += 1;
+                }
+            }
+            if(document.getElementById("houseNo").value == ""){
+                alert("Enter House No");
+                errorCount += 1;
+            }
+            if(document.getElementById("streetName").value == ""){
+                alert("Enter Street Name");
+                errorCount += 1;
+            }
+            if(document.getElementById("city").value == ""){
+                alert("Enter City Name");
+                errorCount += 1;
+            }
+            if(document.getElementById("district").value == ""){
+                alert("Enter District Name");
+                errorCount += 1;
+            }
+
+            let telLength = document.getElementById("telephoneNo").value.length;
+            
+            if(document.getElementById("telephoneNo").value == ""){
+                alert("Enter Telephone No");
+                errorCount += 1;
+            }else{
+                if(!/^[0-9]*$/.test(document.getElementById("telephoneNo").value)){
+                    alert("Enter valid Telephone Number");
+                    errorCount += 1;
+                }
+                if(telLength != 10){
+                    alert("Enter 10 Digit Number")
+                    errorCount += 1;
+                }
+            }
+            if(document.getElementById("cardHolder").value == ""){
+                alert("Enter Card Holder's Name");
+                errorCount += 1;
+            }else{
+                if (!/^[A-Za-z\s]*$/.test(document.getElementById("cardHolder").value)){
+                    alert("Enter Valid Card Holder's Name");
+                    errorCount += 1;
+                }
+            }
+            if(document.getElementById("expiry").value == ""){
+                alert("Enter Expiry");
+                errorCount += 1;
+            }
+
+            let length = document.getElementById("cvc").value.length;
+
+            if(document.getElementById("cvc").value == ""){
+                alert("Enter CVC");
+                errorCount += 1;
+            }else{
+                if (length != 3){
+                    if(length != 4){
+                    alert("Enter Valid CVC");
+                    errorCount += 1;
+                    }
+                }
+            }
+            if(errorCount == 0){
+                alert("Your order has been placed Successfully!")
+            }
+        }    
+    
+  </script>
+</body>
+</html>
